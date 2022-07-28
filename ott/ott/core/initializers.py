@@ -76,7 +76,6 @@ class DefaultInitializer(SinkhornInitializer):
 class GaussianInitializer(DefaultInitializer):
   """GaussianInitializer.
 
-  From :cite:`thornton2022rethinking:22`.
   Compute Gaussian approximations of each pointcloud, then compute closed from
   Kantorovich potential betwen Gaussian approximations using Brenier's theorem
   (adapt convex/ Brenier potential to Kantorovich). Use this Gaussian potential to
@@ -126,7 +125,7 @@ class GaussianInitializer(DefaultInitializer):
 class SortingInitializer(DefaultInitializer):
   """Sorting Init class.
 
-  DualSort algorithm from :cite:`thornton2022rethinking:22`, solve
+  DualSort algorithm, solve
   non-regularized OT problem via sorting, then compute potential through
   iterated minimum on C-transform and use this potential to initialize
   regularized potential
